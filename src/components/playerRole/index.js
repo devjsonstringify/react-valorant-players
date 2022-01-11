@@ -1,3 +1,3 @@
-import PlayerRole from './playerRole'
+import PlayerRole from "./playerRole";
 
-export default PlayerRole
+export default PlayerRole;

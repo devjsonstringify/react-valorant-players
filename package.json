@@ -6,7 +6,8 @@
 		"build": "next build",
 		"start": "next start",
 		"lint": "eslint .",
-		"lint:fix": "eslint . --fix"
+		"lint:fix": "eslint . --fix",
+		"pretty": "prettier --write \"src/**/*.js\""
 	},
 	"dependencies": {
 		"@emotion/cache": "^11.7.1",

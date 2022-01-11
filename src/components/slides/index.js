@@ -1,3 +1,3 @@
-import Slides from './slides'
+import Slides from "./slides";
 
-export default Slides
+export default Slides;

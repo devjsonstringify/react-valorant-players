@@ -1,3 +1,3 @@
-import PlayerAbility from './playerAbility'
+import PlayerAbility from "./playerAbility";
 
-export default PlayerAbility
+export default PlayerAbility;

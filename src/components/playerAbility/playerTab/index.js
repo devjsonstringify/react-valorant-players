@@ -1,3 +1,3 @@
-import PlayerTab from './playerTab'
+import PlayerTab from "./playerTab";
 
-export default PlayerTab
+export default PlayerTab;

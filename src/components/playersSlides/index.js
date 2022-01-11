@@ -1,3 +1,3 @@
-import PlayersSlides from './playersSlides'
+import PlayersSlides from "./playersSlides";
 
-export default PlayersSlides
+export default PlayersSlides;
