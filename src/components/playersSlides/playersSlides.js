@@ -4,6 +4,7 @@ import Container from "@mui/material/Container";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { Splide } from "@splidejs/react-splide";
 import Slides from "@/components/slides";
+import SlidesSkeleton from "@/components/skeletonLoader/SliderMain";
 
 const playersSlides = () => {
   const [agents, setAgents] = useState([]);
@@ -75,16 +76,20 @@ const playersSlides = () => {
         </Splide>
       </Container>
       <Container maxWidth="lg">
-        <Splide
-          ref={mainRef}
-          options={mainOptions}
-          onArrowsMounted={(_, prev, next) => {
-            prev.remove();
-            next.remove();
-          }}
-        >
-          {agents.data && <Slides agents={agents} layout="slide" />}
-        </Splide>
+        {agents.data ? (
+          <Splide
+            ref={mainRef}
+            options={mainOptions}
+            onArrowsMounted={(_, prev, next) => {
+              prev.remove();
+              next.remove();
+            }}
+          >
+            {agents.data && <Slides agents={agents} layout="slide" />}
+          </Splide>
+        ) : (
+          <SlidesSkeleton thumbnailGridCounts={16} />
+        )}
       </Container>
     </Box>
   );

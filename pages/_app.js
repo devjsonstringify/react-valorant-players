@@ -7,7 +7,7 @@ import { CacheProvider } from '@emotion/react';
 import theme from '@/themes/theme';
 import createEmotionCache from '@/themes/createEmotionCache';
 import '@splidejs/splide/dist/css/splide.min.css';
-import '../styles/globals.css';
+import '../styles/globals.css';``
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
 
