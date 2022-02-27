@@ -1,6 +1,7 @@
 module.exports = {
-	images: {
-		domains: ['media.valorant-api.com'],
-	},
-	target: 'serverless',
-};
+    distDir: 'build',
+    images: {
+        domains: ['media.valorant-api.com'],
+    },
+    target: 'serverless',
+}

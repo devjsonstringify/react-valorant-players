@@ -1,3 +1,3 @@
-import CopyrightsAndCredits from "./copyrightsAndCredits";
+import CopyrightsAndCredits from './copyrightsAndCredits'
 
-export default CopyrightsAndCredits;
+export default CopyrightsAndCredits

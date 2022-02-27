@@ -1,3 +1,3 @@
-import PlayerTabPanel from "./playerTabPanel";
+import PlayerTabPanel from './playerTabPanel'
 
-export default PlayerTabPanel;
+export default PlayerTabPanel
