@@ -22,10 +22,28 @@ export default function MyApp(props) {
     return (
         <CacheProvider value={emotionCache}>
             <Head>
+                <title>Valorant agents</title>
                 <meta
                     name="viewport"
                     content="initial-scale=1, width=device-width"
                 />
+            {/* Primary Meta Tags */}
+            <meta name="title" content="Valorant agents"/>
+            <meta name="description" content=""/>
+
+            {/* Open Graph / Facebook */}
+            <meta property="og:type" content="website"/>
+            <meta property="og:url" content="https://metatags.io"/>
+            <meta property="og:title" content="Valorant agents"/>
+            <meta property="og:description" content=""/>
+            <meta property="og:image" content="/assets/VALORANT_JETT_LIGHT.jpg"/>
+
+            {/* Twitter */}
+            <meta property="twitter:card" content="summary_large_image"/>
+            <meta property="twitter:url" content="https://metatags.io/" />
+            <meta property="twitter:title" content="Valorant agents"/>
+            <meta property="twitter:description" content=""/>
+            <meta property="twitter:image" content="/assets/VALORANT_JETT_LIGHT.jpg"/>
             </Head>
             <Script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-grid@0.3.18/dist/js/splide-extension-grid.js"></Script>
             <ThemeProvider theme={theme}>
