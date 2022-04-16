@@ -4,6 +4,7 @@ import Typography from '@mui/material/Typography'
 import { Splide, SplideSlide } from '@splidejs/react-splide'
 import PlayersSlides from '@/components/playersSlides'
 import CopyrightsAndCredits from '../copyrightsAndCredits'
+import { VALORANT} from '../../constant/constant'
 
 const VALORANTS_AGENTS = {
     type: 'loop',
@@ -28,23 +29,7 @@ const Layout = () => (
                     next.remove()
                 }}
             >
-                {[
-                    'V',
-                    'O',
-                    'L',
-                    'R',
-                    'A',
-                    'N',
-                    'T',
-                    '-',
-                    'A',
-                    'G',
-                    'E',
-                    'N',
-                    'T',
-                    'S',
-                    '-',
-                ].map((char, idx) => {
+                {[...VALORANT, '-'].map((char, idx) => {
                     return (
                         <SplideSlide key={`logo_${idx}`}>
                             <Typography
