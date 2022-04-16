@@ -5,6 +5,7 @@ import useMediaQuery from '@mui/material/useMediaQuery'
 import { Splide } from '@splidejs/react-splide'
 import Slides from '@/components/slides'
 import SlidesSkeleton from '@/components/skeletonLoader/SliderMain'
+import Loading from '../loading'
 
 const PlayersSlides = () => {
     const [agents, setAgents] = useState([])
@@ -52,47 +53,62 @@ const PlayersSlides = () => {
     }
 
     return (
-        <Box position="relative">
-            <Container
-                maxWidth="md"
-                sx={{
-                    position: 'relative',
-                    width: '100%',
-                }}
-            >
-                <Splide
-                    id="splide_thumbnails"
-                    ref={thumbsRef}
-                    options={thumbsOptions}
-                    onArrowsMounted={(_, prev, next) => {
-                        prev.remove()
-                        next.remove()
-                    }}
-                >
-                    {agents.data && (
-                        <Slides agents={agents} layout="thumbnail" />
-                    )}
-                </Splide>
-            </Container>
-            <Container maxWidth="lg">
-                {agents.data ? (
-                    <Splide
-                        ref={mainRef}
-                        options={mainOptions}
-                        onArrowsMounted={(_, prev, next) => {
-                            prev.remove()
-                            next.remove()
+        <>
+            {agents.data && agents.data.length > 0 ? (
+                <Box position="relative">
+                    <Container
+                        maxWidth="md"
+                        sx={{
+                            position: 'relative',
+                            width: '100%',
                         }}
                     >
-                        {agents.data && (
-                            <Slides agents={agents} layout="slide" />
+                        <Splide
+                            id="splide_thumbnails"
+                            ref={thumbsRef}
+                            options={thumbsOptions}
+                            onArrowsMounted={(_, prev, next) => {
+                                prev.remove()
+                                next.remove()
+                            }}
+                        >
+                            {agents.data && (
+                                <Slides agents={agents} layout="thumbnail" />
+                            )}
+                        </Splide>
+                    </Container>
+                    <Container maxWidth="lg">
+                        {agents.data ? (
+                            <Splide
+                                ref={mainRef}
+                                options={mainOptions}
+                                onArrowsMounted={(_, prev, next) => {
+                                    prev.remove()
+                                    next.remove()
+                                }}
+                            >
+                                {agents.data && (
+                                    <Slides agents={agents} layout="slide" />
+                                )}
+                            </Splide>
+                        ) : (
+                            <SlidesSkeleton thumbnailGridCounts={16} />
                         )}
-                    </Splide>
-                ) : (
-                    <SlidesSkeleton thumbnailGridCounts={16} />
-                )}
-            </Container>
-        </Box>
+                    </Container>
+                </Box>
+            ) : (
+                <Box
+                    sx={{
+                        minHeight: '100vh',
+                        display: 'grid',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                    }}
+                >
+                    <Loading />
+                </Box>
+            )}
+        </>
     )
 }
 
