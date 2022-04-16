@@ -57,7 +57,7 @@ const Slides = ({ agents, layout = 'thumbnail' }) => {
                                                     ? 'none'
                                                     : 'block',
                                                 position: 'absolute',
-                                                top: '50%',
+                                                top: '10%',
                                                 left: 0,
                                                 width: 'calc(100vw / 5)',
                                             }}
