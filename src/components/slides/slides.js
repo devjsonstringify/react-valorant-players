@@ -49,7 +49,7 @@ const Slides = ({ agents, layout = 'thumbnail' }) => {
                                         alt={displayName}
                                     />
 
-                                    {voiceLine.mediaList.map(({ wave, id }) => (
+                                    {/* {voiceLine.mediaList.map(({ wave, id }) => (
                                         <Box
                                             key={id}
                                             sx={{
@@ -71,7 +71,7 @@ const Slides = ({ agents, layout = 'thumbnail' }) => {
                                                 autobuffer="true"
                                             />
                                         </Box>
-                                    ))}
+                                    ))} */}
 
                                     <Box
                                         sx={{
